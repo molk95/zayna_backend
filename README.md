@@ -11,22 +11,22 @@ Chaque membre de l'équipe dispose de son propre package sous `com.zayna`:
 ```
 backend/
 ├── src/main/java/com/ZAYNA/zayna/
-│   ├── ZaynaBackendApplication.java         # Point d'entrée principal (scanne tous les modules)
-│   └── events/                              # Dossier dédié au module Events
-│       ├── controller/EventController.java  # Endpoints REST (CRUD + Inscription)
-│       ├── dto/EventDTO.java                # Objets de transfert de données
-│       ├── entity/Event.java                # Entité JPA (Table MySQL "events")
-│       ├── enumeration/EventCategory.java   # Enum (WORKSHOPS, SHOWS, STYLING, UPCOMING)
-│       ├── repository/EventRepository.java  # Interface Spring Data JPA
-│       └── service/                         # IEventService.java & EventServiceImpl.java
-│   └── (autres modules de vos camarades: user, marketplace, looks...)
+│   ├── ZaynaBackendApplication.java         
+│   └── events/                              
+│       ├── controller/EventController.java  
+│       ├── dto/EventDTO.java                
+│       ├── entity/Event.java                
+│       ├── enumeration/EventCategory.java   
+│       ├── repository/EventRepository.java  
+│       └── service/                         
+│   └── (autres moduleS: user, marketplace, looks...)
 ├── src/main/resources/
-│   └── application.properties               # Configuration MySQL (XAMPP & Docker)
-├── uploads/events/                          # Stockage local des images des événements
-├── Dockerfile                               # Image Docker multi-stage
-├── docker-compose.yml                       # Orchestration Backend + MySQL 8
-├── init_zaynadb.sql                         # Script SQL pour phpMyAdmin
-└── pom.xml                                  # Dépendances Maven (Web, Data JPA, MySQL)
+│   └── application.properties           
+├── uploads/events/                         
+├── Dockerfile                               
+├── docker-compose.yml                      
+├── init_zaynadb.sql                        
+└── pom.xml                                  
 ```
 
 ---
