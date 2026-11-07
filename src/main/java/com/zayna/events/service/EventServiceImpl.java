@@ -1,9 +1,9 @@
-package com.esprit.zayna.events.service;
+package com.zayna.events.service;
 
-import com.esprit.zayna.events.dto.EventDTO;
-import com.esprit.zayna.events.entity.Event;
-import com.esprit.zayna.events.enumeration.EventCategory;
-import com.esprit.zayna.events.repository.EventRepository;
+import com.zayna.events.dto.EventDTO;
+import com.zayna.events.entity.Event;
+import com.zayna.events.enumeration.EventCategory;
+import com.zayna.events.repository.EventRepository;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 

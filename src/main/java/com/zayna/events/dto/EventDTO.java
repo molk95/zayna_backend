@@ -1,7 +1,7 @@
-package com.esprit.zayna.events.dto;
+package com.zayna.events.dto;
 
-import com.esprit.zayna.events.entity.Event;
-import com.esprit.zayna.events.enumeration.EventCategory;
+import com.zayna.events.entity.Event;
+import com.zayna.events.enumeration.EventCategory;
 
 /**
  * Data Transfer Object pour échanger les données d'un événement avec Flutter

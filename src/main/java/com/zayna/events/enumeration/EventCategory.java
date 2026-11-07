@@ -1,4 +1,4 @@
-package com.esprit.zayna.events.enumeration;
+package com.zayna.events.enumeration;
 
 /**
  * Catégories d'événements ZAYNA
