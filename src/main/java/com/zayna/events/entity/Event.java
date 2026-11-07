@@ -4,7 +4,7 @@ import com.zayna.events.enumeration.EventCategory;
 import jakarta.persistence.*;
 
 /**
- * Entité représentant un événement de mode dans la base de données MySQL
+ * Entité représentant un événement de mode dans la base de données
  */
 @Entity
 @Table(name = "events")
@@ -44,7 +44,7 @@ public class Event {
     @Column(nullable = false)
     private EventCategory category;
 
-    // Constructeur sans argument (requis par JPA)
+    // Constructeur sans argument
     public Event() {
     }
 

@@ -9,11 +9,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-/**
- * Classe principale Spring Boot située à la racine du package com.zayna.
- * Elle permet de scanner automatiquement le module "events" ainsi que les futurs
- * modules développés par vos camarades (ex: user, marketplace, looks).
- */
 @SpringBootApplication
 public class ZaynaBackendApplication {
 
@@ -22,7 +17,7 @@ public class ZaynaBackendApplication {
     }
 
     /**
-     * Initialisation du répertoire de stockage des images locales
+     * Initialisation du répertoire de stockage des images
      */
     @Bean
     public CommandLineRunner initDatabase() {

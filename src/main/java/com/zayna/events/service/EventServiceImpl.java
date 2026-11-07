@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Implémentation du service métier des événements ZAYNA
+ * Implémentation du service métier des événements
  */
 @Service
 public class EventServiceImpl implements IEventService {
