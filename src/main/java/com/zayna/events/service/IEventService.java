@@ -1,6 +1,6 @@
-package com.esprit.zayna.events.service;
+package com.zayna.events.service;
 
-import com.esprit.zayna.events.dto.EventDTO;
+import com.zayna.events.dto.EventDTO;
 
 import java.util.List;
 

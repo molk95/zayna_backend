@@ -1,6 +1,6 @@
-package com.esprit.zayna.events.entity;
+package com.zayna.events.entity;
 
-import com.esprit.zayna.events.enumeration.EventCategory;
+import com.zayna.events.enumeration.EventCategory;
 import jakarta.persistence.*;
 
 /**

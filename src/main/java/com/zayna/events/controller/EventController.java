@@ -1,7 +1,7 @@
-package com.esprit.zayna.events.controller;
+package com.zayna.events.controller;
 
-import com.esprit.zayna.events.dto.EventDTO;
-import com.esprit.zayna.events.service.IEventService;
+import com.zayna.events.dto.EventDTO;
+import com.zayna.events.service.IEventService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

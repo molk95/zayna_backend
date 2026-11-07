@@ -12,7 +12,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.esprit.zayna</groupId>
+    <groupId>com.zayna</groupId>
     <artifactId>zayna-backend</artifactId>
     <version>1.0.0</version>
     <name>zayna-backend</name>

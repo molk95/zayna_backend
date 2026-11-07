@@ -6,11 +6,11 @@ Backend Spring Boot 3 & MySQL pour la gestion dynamique des événements de mode
 
 ## Architecture modulaire du projet
 
-Chaque membre de l'équipe dispose de son propre package sous `com.esprit.zayna`:
+Chaque membre de l'équipe dispose de son propre package sous `com.zayna`:
 
 ```
 backend/
-├── src/main/java/com/esprit/zayna/
+├── src/main/java/com/ZAYNA/zayna/
 │   ├── ZaynaBackendApplication.java         # Point d'entrée principal (scanne tous les modules)
 │   └── events/                              # Dossier dédié au module Events
 │       ├── controller/EventController.java  # Endpoints REST (CRUD + Inscription)
