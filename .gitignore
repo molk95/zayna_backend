@@ -1,0 +1,23 @@
+﻿# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IntelliJ IDEA
+.idea/
+
+# Maven generated files
+target/
+
+# Logs
+*.log
+logs/
+
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
