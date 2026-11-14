@@ -29,6 +29,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Envoi d'e-mails (mot de passe oublié) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
         <!-- Spring Data JPA pour interagir avec la base de données (Entity, Repository) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
