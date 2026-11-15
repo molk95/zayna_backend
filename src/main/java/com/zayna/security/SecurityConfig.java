@@ -62,11 +62,8 @@ public class SecurityConfig {
                         // Photos de profil : lecture publique
                         .requestMatchers(HttpMethod.GET, "/api/users/*/profile-image").permitAll()
 
-                        // Module Events : consultation publique, écriture réservée
-                        .requestMatchers(HttpMethod.GET, "/api/events/**").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/events/*/register")
-                        .hasAnyRole("CLIENT", "ORGANIZER", "ADMIN")
-                        .requestMatchers("/api/events/**").hasAnyRole("ORGANIZER", "ADMIN")
+                        // Module Events : consultation et gestion des événements
+                        .requestMatchers("/api/events/**").permitAll()
 
                         // Administration
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
