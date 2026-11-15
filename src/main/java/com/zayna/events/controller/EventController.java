@@ -7,8 +7,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 /**
  * Contrôleur REST pour le module Events de ZAYNA
@@ -109,4 +116,35 @@ public class EventController {
 
         return new ResponseEntity<>(imageBytes, headers, HttpStatus.OK);
     }
+
+    /**
+     * Uploader une image d'événement depuis le smartphone ou web
+     * POST /api/events/upload-image
+     */
+    @PostMapping(value = "/upload-image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<Map<String, String>> uploadEventImage(@RequestParam("file") MultipartFile file) {
+        if (file.isEmpty()) {
+            return ResponseEntity.badRequest().body(Map.of("error", "Fichier vide"));
+        }
+        try {
+            String originalFilename = file.getOriginalFilename();
+            String extension = ".jpg";
+            if (originalFilename != null && originalFilename.lastIndexOf(".") != -1) {
+                extension = originalFilename.substring(originalFilename.lastIndexOf("."));
+            }
+            String newFileName = UUID.randomUUID() + extension;
+            Path uploadPath = Paths.get("uploads", "events").toAbsolutePath().normalize();
+            if (!Files.exists(uploadPath)) {
+                Files.createDirectories(uploadPath);
+            }
+            Path destination = uploadPath.resolve(newFileName);
+            Files.copy(file.getInputStream(), destination, StandardCopyOption.REPLACE_EXISTING);
+            String imageUrl = "/api/events/images/" + newFileName;
+            return ResponseEntity.ok(Map.of("imageUrl", imageUrl));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(Map.of("error", "Erreur upload: " + e.getMessage()));
+        }
+    }
+
 }
